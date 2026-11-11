@@ -1,0 +1,913 @@
+=== PAGE 1 ===
+DOSSIER PROFESSIONNEL (DP)
+◢
+Nom de naissance ▶ Beauregard
+Nom d’usage ▶ Beauregard
+Prénom ▶ Isabelle
+Adresse ▶ 70 rue du pont, 75000 Paris
+Titre professionnel visé
+Développeur Web et Web Mobile | DWWM
+MODALITE D’ACCES :
+☒ Parcours de formation
+☐ Validation des Acquis de l’Expérience (VAE)
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+1
+
+=== PAGE 2 ===
+DOSSIER PROFESSIONNEL (DP)
+Présentation du dossier
+Le dossier professionnel (DP) constitue un élément du système de validation du titre professionnel.
+Ce titre est délivré par le Ministère chargé de l’emploi.
+Le DP appartient au candidat. Il le conserve, l’actualise durant son parcours et le présente
+obligatoirement à chaque session d’examen.
+Pour rédiger le DP, le candidat peut être aidé par un formateur ou par un accompagnateur VAE.
+Il est consulté par le jury au moment de la session d’examen.
+Pour prendre sa décision, le jury dispose :
+1. des résultats de la mise en situation professionnelle complétés, éventuellement, du questionnaire
+professionnel ou de l’entretien professionnel ou de l’entretien technique ou du questionnement à partir de
+productions.
+2. 3. 4. du Dossier Professionnel (DP) dans lequel le candidat a consigné les preuves de sa pratique professionnelle.
+des résultats des évaluations passées en cours de formation lorsque le candidat évalué est issu d’un parcours
+de formation
+de l’entretien final (dans le cadre de la session titre).
+[Arrêté du 22 décembre 2015, relatif aux conditions de délivrance des titres professionnels
+du ministère chargé de l’Emploi]
+Ce dossier comporte :
+▶ pour chaque activité-type du titre visé, un à trois exemples de pratique professionnelle ;
+▶ un tableau à renseigner si le candidat souhaite porter à la connaissance du jury la détention d’un titre, d’un
+diplôme, d’un certificat de qualification professionnelle (CQP) ou des attestations de formation ;
+▶ une déclaration sur l’honneur à compléter et à signer ;
+▶ des documents illustrant la pratique professionnelle du candidat (facultatif)
+▶ des annexes, si nécessaire.
+Pour compléter ce dossier, le candidat dispose d’un site web en accès libre sur le site.
+◢ http://travail-emploi.gouv.fr/titres-professionnels
+Page 2 DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 3 ===
+DOSSIER PROFESSIONNEL (DP)
+Sommaire
+Exemples de pratique professionnelle
+Développer la partie front-end d'une application web ou web mobile sécurisée p. 5
+▶ Arcadia .................................................................................................................................. p. p. 5
+▶ Mini jeu parallaxe JS .............................................................................................................. p. p. 8
+▶ Intitulé de l’exemple n° 3 ....................................................................................................... p p.
+Développer la partie back-end d'une application web ou web mobile sécurisée p.
+▶ Arcadia .................................................................................................................................. p. p. ▶ QuizApp ................................................................................................................................. p. p. ▶ Intitulé de l’exemple n° 3 ....................................................................................................... p p.
+10
+14
+Titres, diplômes, CQP, attestations de formation (facultatif) p.
+Déclaration sur l’honneur p.
+Documents illustrant la pratique professionnelle (facultatif) p.
+Annexes (Si le RC le prévoit) p.
+18
+20
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+3
+
+=== PAGE 4 ===
+DOSSIER PROFESSIONNEL (DP)
+EXEMPLES DE PRATIQUE
+PROFESSIONNELLE
+Page
+4
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 5 ===
+DOSSIER PROFESSIONNEL (DP)
+Activité-type 1 Développer la partie front-end d'une application web ou web mobile
+sécurisée
+Exemple n°1 ▶ Zoo Arcadia
+1. Décrivez les tâches ou opérations que vous avez effectuées, et dans quelles conditions :
+Ce projet a été réalisé dans le cadre de l’Évaluation en Cours de Formation (ECF) de ma formation
+DWWM. Le sujet m’a été donné par les formateurs de STUDI.
+Installation et configuration de mon environnement de travail :
+J'ai commencé par créer un nouveau repository (stockage centralisé et distant) sur mon compte GitHub
+en cliquant sur "New", que j'ai nommé laravel-project-arcadia et défini en mode public avant de
+cliquer sur "Create repository".
+Ensuite, dans mon IDE (Integrated Development Environment) PHPStorm, j'ai utilisé l'option "Clone
+Repository" pour récupérer ce repository sur ma machine.
+Initialement, j'avais installé manuellement les outils nécessaires, notamment PHP 8.2. Cependant, j'ai
+ensuite repris le projet en l'initialisant avec Docker (outil de conteneurisation) dans le WSL Debian
+(Windows Subsystem Linux) pour assurer une meilleure gestion des dépendances et de
+l’environnement de développement.
+- Installation de Laravel
+En suivant le Quick Start de la documentation officielle, j’ai installé Laravel en exécutant la commande :
+composer create-project laravel/laravel .
+- Configuration de Docker et WSL
+J'avais déjà installé Docker Desktop, donc pour démarrer mon environnement de travail, je dois :
+-> Lancer Docker Desktop
+-> Ouvrir un terminal PowerShell et exécuter la commande : wsl -d debian
+-> Naviguer vers mon projet avec : cd ~/projects/laravel-project-arcadia
+-> Démarrer les conteneurs Docker en utilisant : make up
+Ou si besoin d’un redémarrage complet : make restart
+(Ces commandes sont définies dans mon fichier Makefile pour simplifier la gestion des conteneurs.)
+J’aurais pu utiliser Git en lignes de commandes et cloner mon repo avec :
+« git clone le_lien_de_mon_projet »
+-> Me déplacer dans le dossier de mon projet : cd laravel-project-arcadia
+-> Initialiser le projet Laravel dans ce répertoire : composer create-project laravel/laravel .
+-> Versionner les fichiers une fois Laravel installé : git add .
+Le reste ne change pas.
+-> Faire le premier commit : git commit -m " first commit: web.php, HomeController, images, css,
+main route"
+-> Envoyer les modifications sur mon repo GitHub : git push -u origin main
+-> Pour mieux organiser mon développement, j’ai suivi une stratégie de branches : git checkout -b
+branch-name
+-> Après chaque avancée j’ajoute les fichiers, commit et push :
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+5
+
+=== PAGE 6 ===
+DOSSIER PROFESSIONNEL (DP)
+git add .
+git commit -m "nom du message"
+git push origin feat/branch-name
+-> Une fois les développements terminés et validés, je me place sur la branche du dessous (main si le cas
+est présent) et je fusionne la branche :
+git chekout main
+git merge feat/branch-name
+git push origin main
+Et je recommence à chaque branche/ chaque feature / chaque merge.
+Développement de la partie front-end de l'application Zoo Arcadia
+Création des éléments graphiques :
+• Utilisation de Canva pour créer le logo (Cf. Annexes, Activité Type 1, Exemple 1, Pic. 1a et 1b).
+• Utilisation de Figma pour élaborer la charte graphique (Cf. Annexes, Activité Type 1, Exemple 1,
+Pic. 1c), ainsi que les maquettes Wireframes (Cf. Annexes, Activité Type 1, Exemple 1, Pic. 2a à
+Pic. 2c : mobile, et Pic.4a à Pic.4c : desktop) et Mockup (Cf. Annexes, Activité Type 1, Exemple 1,
+Pic. 3a à Pic. 3c : mobile ; Pic. 5a à Pic. 5c : desktop).
+Développement des interfaces utilisateur :
+• Création des interfaces pour les pages principales : Accueil, Animaux, Habitats, Services, Avis, et
+Contact.
+• Structuration du contenu avec HTML5 (pages .blade avec Laravel : voir page 6 "Précisez les
+moyens utilisés" pour l’installation de Laravel.) en respectant les standards d’accessibilité pour
+garantir une expérience utilisateur inclusive.
+• Utilisation de balises sémantiques comme <header>, <main>, et <footer> : layouts/base.blade
+pour améliorer l’accessibilité et le SEO. (Cf. Annexes, Activité Type 1, Exemple 1, Pic.6)
+• Ajout d’éléments interactifs tels que des boutons pour naviguer entre les pages et des
+formulaires pour collecter des données utilisateur (ex. avis, contact).
+Mise en forme et personnalisation des styles :
+• Utilisation de CSS3 (SCSS) pour assurer un design responsif et adapté à tous types d’écrans avec
+les media queries. (Cf. Annexes, Activité Type 1, Exemple 1, Pic.7)
+• Création de fichiers pour les variables (Cf. Annexes, Activité Type 1, Exemple 1, Pic.8). Affichage
+en quinconce des cartes qui affichent les services avec la pseudo-classe :nth-child (Cf. Annexes,
+Activité Type 1, Exemple 1, Pic.9) les composants comme les boutons, le menu format mobile
+(Cf. Annexes, Activité Type 1, Exemple 1, Pic.10).
+Intégration des interactions utilisateur :
+• Utilisation de JavaScript pour des fonctionnalités dynamiques, telles que l’affichage conditionnel
+et la validation des formulaires.
+• Validation des formulaires côté client avant l’envoi des données, pour guider l’utilisateur (par
+exemple, afficher un message d’erreur si un champ est vide).
+• Assurance d’une navigation fluide grâce à un menu intuitif permettant d’accéder rapidement
+aux différentes sections du site.
+Utilisation de JavaScript pour la partie dynamique :
+• Utilisation de la méthode addEventListener() de la classe Event.Target pour des fonctionnalités
+Page
+6
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 7 ===
+DOSSIER PROFESSIONNEL (DP)
+comme le carrousel.
+• Récupération des données avec l’API (Application programming interface) fetch en utilisant des
+fonctions asynchrones. (Cf. Annexes, Activité Type 1, Exemple 1, Pic.11 à 13, pages 26-27)
+• Orientation des choix d'interface basée sur les retours des utilisateurs finaux imaginaires
+(personas).
+2. Précisez les moyens utilisés :
+Pour ce projet j’ai utilisé :
+Le logiciel Figma pour la réalisation des maquettes
+L’outil de design et de communication visuelle en ligne Canva pour le logo.
+L’IDE PhpStorm de la suite JetBrains pour un développement efficace.
+Frontend :
+• HTML5, CSS3, JS
+3. Avec qui avez-vous travaillé ?
+Travail réalisé en autonomie dans un cadre individuel. Respect des délais impartis dans le cadre de
+l’ECF.
+4. Contexte
+Nom de l’entreprise, organisme ou association ▶ Projet ECF donné par Studi
+Chantier, atelier, service ▶ Formation
+Période d’exercice ▶ Du : 01/07/2024 au : 22/11/2024
+5. Informations complémentaires (facultatif)
+Le projet Arcadia est une application web prévue pour l’ECF
+Le projet a été développé dans le cadre de la formation DWWM afin de valider les compétences du
+référentiel en développement web front-end et back-end.
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+7
+
+=== PAGE 8 ===
+DOSSIER PROFESSIONNEL (DP)
+Activité-type 1 Développer la partie front-end d'une application web ou web mobile
+sécurisée
+Exemple n°2 ▶ Mini jeu parallaxe Yoshi en JavaScript
+1. Décrivez les tâches ou opérations que vous avez effectuées, et dans quelles conditions :
+Pour ce projet, j’ai reproduit un mini-jeu Mario en parallaxe en utilisant JavaScript et CSS, mais en
+remplaçant Mario par Yoshi et en créant mon propre décor.
+Recherche et préparation des éléments graphiques :
+• Recherche d’une planche de personnages en 2D sur internet pour créer le sprite (succession
+d’images matricielles) de Yoshi en marche.
+• Rognage des parties nécessaires pour obtenir 25 images consécutives représentant le
+mouvement de Yoshi.
+• Utilisation de Figma pour créer les éléments de décor tels que les arbres, les herbes, le ciel et les
+nuages (Cf. Annexes, Activité Type 1, Exemple 2, Pic. 14).
+Création du fichier HTML :
+• Création d’un fichier HTML avec des <div> identifiées par des classes pour accueillir les
+différentes parallaxes (Cf. Annexes, Activité Type 1, Exemple 2, Pic. 15a).
+Mise en forme avec CSS :
+• Réinitialisation des marges avec un reset CSS.
+• Positionnement de Yoshi en absolu pour un placement précis sans être affecté par les autres
+éléments de la page.
+• Utilisation de la propriété animation sur les classes .yoshi-left et .yoshi-right avec la
+fonction steps(25) pour créer un effet de marche à la vitesse de 3 secondes.
+• Ajout de la propriété transform: scaleX(-1) pour inverser l’animation vers la gauche.
+• Positionnement des éléments de décor pour créer un effet de répétition infinie.
+• Utilisation de keyframes pour créer un effet de mouvement plus ou moins lent, simulant le
+défilement du paysage.
+Gestion des événements :
+• Affichage d’une modal au chargement de la fenêtre avec une description de l’utilisation de
+l’application (Cf. Annexes, Activité Type 1, Exemple 2, Pic. 15b et 15c).
+• Fermeture de la modal en cliquant sur le bouton fermer (X) ou n’importe où dans la fenêtre
+avec window.click, cette action ne se produisant qu’une seule fois grâce à l’option { once: true
+}.
+Interactions utilisateur :
+• Utilisation des événements clavier pour déplacer Yoshi :
+• keydown (marche) : Ajout de la classe .yoshi-left ou .yoshi-right pour changer la
+direction et appliquer l’animation, ainsi que la mise à jour de la variable move pour
+modifier la position du paysage.
+• keyup (arrêt) : Retrait des classes .yoshi-left et .yoshi-right pour arrêter les animations
+de marche lorsque la touche est relâchée.
+Page
+8
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 9 ===
+DOSSIER PROFESSIONNEL (DP)
+2. Précisez les moyens utilisés :
+Pour ce projet, j’ai utilisé un peu de HTML, du CSS et du JS vanilla.
+J’ai choisi l’IDE PhpStorm.
+Avec Figma j’ai créé le sprite du personnage Yoshi et tout le décor.
+Déploiement sur Netlify : https://yoshi-parallax.netlify.app
+3. Avec qui avez-vous travaillé ?
+J’ai travaillé seule pour ce projet.
+4. Contexte
+Nom de l’entreprise, organisme ou association ▶ Projet personnel
+Chantier, atelier, service ▶ Formation
+Période d’exercice ▶ Du : 28/12/2024 au : 15/01/2025
+5. Informations complémentaires (facultatif)
+Évolutions futures : Yoshi pourra sauter par-dessus et marcher sur les tonneaux, ajout d’ennemis. Ajout
+du format mobile (des touches flèches ou une fonction au toucher de l’écran qui ferait avancer le
+personnage)
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+9
+
+=== PAGE 10 ===
+DOSSIER PROFESSIONNEL (DP)
+Activité-type 2 Développer la partie back-end d'une application web ou web mobile
+sécurisée
+Exemple n° 1 ▶ Zoo Arcadia
+1. Décrivez les tâches ou opérations que vous avez effectuées, et dans quelles conditions :
+Avant de pouvoir coder la partie back-end, je réalise le MCD (Cf. Annexe, Activité Type 2, Exemple 1,
+Pic.18) ainsi que les diagrammes de cas d’utilisation (Cf. Annexe, Activité Type 2, Exemple 1, Pic.19) et
+le diagramme de séquence pour le login (Cf. Annexe, Activité Type 2, Exemple 1, Pic.20) à l'aide du
+logiciel FigJam (Figma).
+Je peux maintenant me concentrer sur la partie back-end de l'application Zoo Arcadia, développée avec
+le framework Laravel pour gérer les fonctionnalités administratives et les données du zoo de manière
+sécurisée et performante.
+En utilisant la commande php artisan make:migration create_habitats_table, je crée la table des
+habitats et la complète dans la migration (Cf. Annexe, Activité Type 2, Exemple 1, Pic.21). Cela me
+permet ensuite de créer des seeders, qui me fourniront des entrées dans la base de données en local,
+évitant ainsi de réécrire les données à chaque modification ou suppression lors des tests de mes
+fonctionnalités.
+J’ai porté une attention particulière à la sécurité des accès grâce à une gestion précise des rôles et des
+permissions avec la façade Gate – Policy (Cf. Annexe, Activité Type 2, Exemple 1, Pic.22).
+Concernant les fonctionnalités, le back-end permet une gestion complète des utilisateurs. Un système
+d’authentification sécurisé a été mis en place pour limiter l’accès aux seuls administrateurs, vétérinaires
+et employés, empêchant les visiteurs de créer des comptes (Cf. Annexe, Activité Type 2, Exemple 1,
+Pic.23). Chaque rôle dispose de permissions spécifiques : l’administrateur gère les comptes, habitats,
+services et animaux ; les vétérinaires saisissent des rapports médicaux sur les animaux et ajoutent des
+commentaires sur les habitats ; les employés valident les avis des visiteurs, modifient les services
+proposés et répondent aux messages reçus via le formulaire de contact.
+La gestion des données du zoo est un élément essentiel. Par exemple, pour les habitats des animaux, il
+est possible d’ajouter, consulter, modifier ou supprimer des informations grâce à un système appelé
+CRUD (Create, Read, Update, Delete).
+• Créer un habitat (Create) : Cette action permet d’ajouter un nouvel habitat. Les informations
+sont saisies via un formulaire validé (HabitatsFormRequest) avant d’être enregistrées dans la
+base de données. (Cf. Annexe, Activité Type 2, Exemple 1, Pic.24)
+• Consulter les habitats (Read) : Il existe plusieurs façons de lire les informations des habitats :
+o index : Affiche la liste complète des habitats. (Cf. Annexe, Activité Type 2, Exemple 1,
+Pic.25)
+o show : Permet d’afficher les détails d’un habitat précis en fonction de son nom. Si
+Page
+10
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 11 ===
+DOSSIER PROFESSIONNEL (DP)
+l’habitat n’existe pas, un message d’erreur est affiché. (Cf. Annexe, Activité Type 2,
+Exemple 1, Pic.26)
+o habitats : Montre simplement la page des habitats, sans données spécifiques. (Cf.
+Annexe, Activité Type 2, Exemple 1, Pic.27)
+• Modifier un habitat (Update) : Si un habitat doit être mis à jour, on utilise deux étapes :
+o edit : Récupère les informations d’un habitat spécifique et affiche un formulaire de
+modification. (Cf. Annexe, Activité Type 2, Exemple 1, Pic.28)
+o update : Enregistre les nouvelles informations après validation du formulaire. (Cf.
+Annexe, Activité Type 2, Exemple 1, Pic.29)
+• Supprimer un habitat (Delete) : Cette action permet d’effacer un habitat en sélectionnant son
+nom. (Cf. Annexe, Activité Type 2, Exemple 1, Pic.30)
+Grâce à ce système, la gestion des habitats est simplifiée et organisée, facilitant le travail des
+responsables du zoo.
+La sécurité a été une priorité tout au long du développement. Les mots de passe sont hashés avec
+Bcrypt automatiquement par Laravel et les permissions sont définies à l’aide des Policies et Gates (Cf.
+Annexe, Activité Type 2, Exemple 1, Pic.31, 32 et 33) pour garantir que chaque utilisateur n’accède
+qu’aux fonctionnalités qui lui sont autorisées. Les formulaires incluent des tokens Cross-Site-Request-
+Forgery (les jetons @csrf) pour éviter de contourner les droits administrateurs. Également, les
+identifiants de connexion à la base de données sont protégés dans un fichier .env .
+D’un point de vue technique, j’ai choisi Laravel pour sa simplicité et sa robustesse. L’utilisation
+d’Eloquent ORM (Object Relationship Manager) facilite les interactions avec la base de données MySQL,
+utilisée pour les données structurées comme les utilisateurs ou les habitats. (Cf. Annexe, Activité Type
+2, Exemple 1, Pic.34, 35 et 36) pour visualiser ce que donneraient les requêtes en MariaDB).
+MongoDB, en revanche, a été adopté pour stocker les statistiques de consultation des animaux. (Cf.
+Annexe, Activité Type 2, Exemple 1, Pic.37 : Installation MongoDB pour Laravel, et Pic 38, 39a et 39b :
+Controller, migration et Model)
+Le stockage des fichiers, comme les images des animaux et habitats, est géré via le système intégré de
+Laravel (Storage) pour une organisation claire et sécurisée.
+Enfin, le projet a été développé dans un environnement configuré avec l’IDE PHPStorm, ce qui a permis
+un flux de travail fluide et efficace. L’application a été déployée sur un VPS Debian via Docker, (Cf.
+Annexe, Activité Type 2, Exemple 1, Pic.40 à 43 : Dockerfile, docker-compose, mongo-init et Makefile)
+bien que quelques défis aient été rencontrés lors de la configuration, notamment avec Nginx, les
+domaines SSL et le protocole sécurisé https.
+Pour les tests, des scénarios manuels ont permis de simuler les actions des différents utilisateurs.
+2. Précisez les moyens utilisés :
+Pour réaliser Arcadia ainsi que chacun de mes projets, j’ai configuré mon environnement de travail
+comme suit :
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+11
+
+=== PAGE 12 ===
+DOSSIER PROFESSIONNEL (DP)
+• Système et outils de base :
+§ Système d’exploitation : WSL Debian sous Windows
+§ IDE : PhpStorm ou l’éditeur de code VS Code avec extensions Laravel, React et Tailwind
+§ Gestionnaire de versions : Git / GitHub pour le suivi de projet.
+• Installation des outils nécessaires
+§ Docker : Pour conteneuriser le projet
+§ WSL et dépendances : Curl
+§ Gestionnaires de paquets : Composer pour PHP, Pnpm pour JavaScript (seulement
+Arcadia)
+(Cf. Annexe, Pic.44 à Pic.46, page 45)
+• Clone du dépôt Git
+• Lancer l’environnement avec Docker
+• Installer les dépendances : Backend Laravel (make api). Frontend Vite (make pnpm
+cmd= "install")
+• Configuration des fichiers spécifiques : Variables d’environnement (.env). Configuration Nginx
+(defaut.conf)
+• Accès à la base de données avec AlwaysData => Arcadia. (Docker -> PostgreSQL pour d’autres
+projets)
+Le software Figjam (Figma) pour les diagrammes de cas d’utilisation, diagramme de séquence et
+Excalidraw pour faire le MCD (Modèle Conceptuel de Données) (Cf. Annexes, Activité Type 2, Exemple1,
+Pic.18, 19 et 20).
+Backend :
+• PHP : Framework Laravel
+Base de données :
+• SQL : AlwaysData MariaDB
+• NoSQL : MongoDB
+Déploiement :
+Hebergement sur VPS debian chez OVH : XXX
+3. Avec qui avez-vous travaillé ?
+J’ai travaillé seule sur ce projet.
+Page
+12
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 13 ===
+DOSSIER PROFESSIONNEL (DP)
+4. Contexte
+Nom de l’entreprise, organisme ou association ▶ Projet ECF donné par Studi
+Chantier, atelier, service ▶ Formation
+Période d’exercice ▶ Du : 01/07/2024 au : 22/11/2024
+5. Informations complémentaires (facultatif)
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+13
+
+=== PAGE 14 ===
+DOSSIER PROFESSIONNEL (DP)
+Activité-type 2 Développer la partie back-end d'une application web ou web mobile
+sécurisée
+Exemple n° 2 ▶ QuizApp
+1. Décrivez les tâches ou opérations que vous avez effectuées, et dans quelles conditions :
+L’application QuizApp a été réalisée dans le cadre de ma formation DWWM.
+Tout d’abord, j’ai initialisé mon repository sur GitHub, puis j’ai cloné mon projet sur PHPStorm afin de
+commencer à structurer mon application. (Cf. Annexe, Activité Type 2, Exemple 2. Pic.47 – Structure du
+projet)
+Puisque j’ai travaillé en PHP vanilla, j’ai organisé mon projet avec :
+• un répertoire classes/ contenant mes classes PHP (Autoloader, Database, Question et Quiz),
+• un répertoire public/ destiné aux fichiers CSS et JavaScript.
+Structure du code :
+J’ai créé un Autoloader avec la méthode register() qui enregistre autoload().
+Ainsi, dès qu’une classe est instanciée, PHP appelle automatiquement autoload(), ce qui permet de
+récupérer les classes sans avoir à les inclure manuellement à chaque fois avec require_once.
+La classe Database gère la connexion à la base de données et assure qu’elle n’est instanciée qu’une
+seule fois, ce qui évite d’écrire new PDO() à plusieurs endroits dans le code.
+La classe Question permet de récupérer les questions et leurs réponses associées depuis la base de
+données, en utilisant la connexion fournie par la classe Database.
+Enfin, la classe Quiz vérifie les réponses d’un utilisateur et calcule son score.
+Intégration de la base de données :
+Pour intégrer ma base de données à mon application, j’ai choisi AlwaysData. (Cf. Annexe, Activité Type
+2, Exemple 2. Pic.48 – Connexion à la base de données MariaDB via AlwaysData sur PHPStorm)
+Une fois ma base de données prête, je me place dessus :
+i-jurain_quiz
+Puis, je fais un clic droit sur ma base et j’ouvre une nouvelle console :
+New -> Query Console
+Je peux alors créer mes tables (Cf. Annexe, Activité Type 2, Exemple 2. Pic.49) et exécuter mes requêtes
+via la console SQL de PHPStorm. (Cf. Annexe, Activité Type 2, Exemple 2. Pic.50)
+Page
+14
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 15 ===
+DOSSIER PROFESSIONNEL (DP)
+Pour éviter une erreur lors du lancement du script, j’exécute la requête :
+‘DROP TABLE IF EXISTS [nom de la table];’
+Cela empêche un message d’erreur indiquant que la table existe déjà. (Cf. Annexe, Activité Type 2,
+Exemple 2. Pic.51)
+Exemple de requête de jointure (JOIN) et la suppression de la réponse de cette requête (DELETE).
+(Cf. Annexe, Activité Type 2, Exemple 2. Pic.52)
+Insertions dans les tables questions et answers. (Cf. Annexe, Activité Type 2, Exemple 2. Pic.53)
+Mise à jour des données avec UPDATE (Cf. Annexe, Activité Type 2, Exemple 2. Pic.54)
+Pour cela, j’exécute deux requêtes SQL :
+1. 2. La première met à jour la réponse Blanche en indiquant qu’elle est fausse (booléen = 0).
+La seconde met à jour la réponse Grise en indiquant qu’elle est correcte (booléen = 1)
+(Cf. Annexe, Activité Type 2, Exemple 2. – Mon script SQL complet en Pic.55 et une capture du QuizApp
+en Pic.56)
+2. Précisez les moyens utilisés :
+Ce projet a été réalisé avec mon IDE PHPStorm, AlwaysData pour créer ma base de données.
+Hôte MySQL mysql-i-jurain.alwaysdata.net
+Version : 10.11 (mariadb)
+Stack technique :
+PHP vanilla (POO)
+MySQL
+HTML/CSS
+JavaScript vanilla
+Composer
+3. Avec qui avez-vous travaillé ?
+J’ai travaillé seule sur ce projet.
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+15
+
+=== PAGE 16 ===
+DOSSIER PROFESSIONNEL (DP)
+4. Contexte
+Nom de l’entreprise, organisme ou association ▶ Projet personnel
+Chantier, atelier, service ▶ Formation
+Période d’exercice ▶ Du : 06/03/2025 au : 10/03/2025
+5. Informations complémentaires (facultatif)
+Cette application de Quiz a été développée pour m’exercer avec la base de données.
+Page
+16
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 17 ===
+DOSSIER PROFESSIONNEL (DP)
+Titres, diplômes, CQP, attestations de formation
+(facultatif)
+Intitulé Autorité ou organisme Date
+Cliquez ici. Cliquez ici pour taper du texte. Cliquez ici pour
+sélectionner une date.
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+17
+
+=== PAGE 18 ===
+DOSSIER PROFESSIONNEL (DP)
+Déclaration sur l’honneur
+Je soussigné(e) Isabelle BEAUREGARD,
+déclare sur l’honneur que les renseignements fournis dans ce dossier sont exacts et que je suis
+l’auteur(e) des réalisations jointes.
+Fait à Paris le 19/01/2025
+pour faire valoir ce que de droit.
+Signature :
+Page
+18
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 19 ===
+DOSSIER PROFESSIONNEL (DP)
+Documents illustrant la pratique professionnelle
+(facultatif)
+Intitulé
+Cliquez ici pour taper du texte.
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+19
+
+=== PAGE 20 ===
+Pic.1a
+Page
+20
+DOSSIER PROFESSIONNEL (DP)
+ANNEXES
+Activité Type 1
+Exemple 1
+Logo desktop et mobile :
+Pic.1b
+Charte graphique
+Pic.1c
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 21 ===
+DOSSIER PROFESSIONNEL (DP)
+Exemples de wireframes et de mockup mobile :
+Pic.2c
+Pic.2a
+Pic.2b
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+21
+
+=== PAGE 22 ===
+DOSSIER PROFESSIONNEL (DP)
+Pic.3a Pic.3b Pic.3c
+Page
+22
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 23 ===
+DOSSIER PROFESSIONNEL (DP)
+Exemples de wireframes et mockup desktop :
+Pic.4c
+Pic.4a
+Pic.4b
+Pic.5a Pic.5b Pic.5c
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+23
+
+=== PAGE 24 ===
+DOSSIER PROFESSIONNEL (DP)
+Extrait de code layouts/base.blade : HTML, balises
+Pic.6
+Page
+24
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 25 ===
+DOSSIER PROFESSIONNEL (DP)
+Extraits de code : Media Queries CSS
+Pic.7
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+25
+
+=== PAGE 26 ===
+DOSSIER PROFESSIONNEL (DP)
+Extraits de code : Variables CSS (Pic.8)
+Pic.8
+Page
+26
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 27 ===
+DOSSIER PROFESSIONNEL (DP)
+Extraits de code : CSS page Services (Pic.9) CSS navigation menu burger (Pic.10)
+Pic.10
+Pic.9
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+27
+
+=== PAGE 28 ===
+DOSSIER PROFESSIONNEL (DP)
+Extraits de code : carousel.js | reviewsForm.js | sendMail.js (Fetch Pic.11, 12 et 13)
+Pic.11
+Page
+28
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 29 ===
+DOSSIER PROFESSIONNEL (DP)
+Pic.12
+Pic.13
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+29
+
+=== PAGE 30 ===
+DOSSIER PROFESSIONNEL (DP)
+Activité Type 1
+Exemple 2
+Pic.14
+Pic.15a
+Page
+30
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 31 ===
+DOSSIER PROFESSIONNEL (DP)
+Extrait de code : Modal JS et CSS
+Pic.15c
+Pic.15b
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+31
+
+=== PAGE 32 ===
+DOSSIER PROFESSIONNEL (DP)
+Pic.16
+Pic.17
+Page
+32
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 33 ===
+DOSSIER PROFESSIONNEL (DP)
+Activité Type 2
+Exemple 1
+Pic. 18
+MCD
+id
+Animals
+Pic.18
+Foods
+1.n
+id
+name
+breed
+image
+1.1
+AFFECT
+1.n name
+description
+quantity
+EAT description
+created
+_
+updated
+at
+at
+_
+1.1 1.1
+1.1
+VeterinarianReport Openings
+id
+created
+at
+_
+validated
+at
+_
+animal
+state
+_
+content
+GIVE
+id
+day_
+open
+hour
+_
+open
+hour
+close
+_
+created
+at
+updated
+_
+at
+_
+1.1
+1.1
+GET
+1.n
+1.n
+Zoo
+id
+1.1 0.n
+name
+BELONG description
+created
+_
+updated
+at
+at
+_
+0.n
+1.n
+0.n
+DETAIN
+0.n
+Habitats
+id
+name
+1.1
+description
+image
+POSSESS
+POSSESS
+1.1
+Services
+HAVE
+id
+name
+description
+image
+1.1
+Reviews
+Users
+id
+name
+WRITE 0.n email
+password
+role
+created
+_
+updated
+_
+at
+at
+rating
+id
+author
+content
+status
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+33
+
+=== PAGE 34 ===
+DOSSIER PROFESSIONNEL (DP)
+Pic. 19 Diagramme de cas d’utilisation
+Pic.19
+Diagramme de cas d’utilisation (Arcadia)
+Page
+34
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 35 ===
+DOSSIER PROFESSIONNEL (DP)
+Pic.20
+Table "habitats" créée avec la commande php artisan make :migration create_habitats_table
+Pic.21
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+35
+
+=== PAGE 36 ===
+DOSSIER PROFESSIONNEL (DP)
+Extrait de code Façade Gate – Policies :
+Pic.22
+Page
+36
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 37 ===
+DOSSIER PROFESSIONNEL (DP)
+Pic.23
+Extraits de code : Création de l’administrateur (super-admin)
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+37
+
+=== PAGE 38 ===
+Pic.24
+Pic.25
+Pic.26
+Page
+38
+DOSSIER PROFESSIONNEL (DP)
+Pic.27
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 39 ===
+DOSSIER PROFESSIONNEL (DP)
+Pic.28
+Pic.29
+Pic.30
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+39
+
+=== PAGE 40 ===
+DOSSIER PROFESSIONNEL (DP)
+Extraits de code : Sécurité
+Policy, Gate
+Pic.31
+Pic.32
+Pic.33
+Page
+40
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 41 ===
+DOSSIER PROFESSIONNEL (DP)
+Extrait de code : Base de données SQL
+1. CREATE & DROP DATABASE / CREATE TABLE
+Pic.34
+Pic.35
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+41
+
+=== PAGE 42 ===
+DOSSIER PROFESSIONNEL (DP)
+2. INSERT INTO DB
+On insert les données telles que la table Zoo avant la table Users pour respecter les contraintes
+d’intégrité des clés secondaires.
+Pic.36
+Extrait de code : Base de données NoSQL
+Installation du package MongoDB pour Laravel (pic37)
+Model, Controller et Migration MongoDB (pic38, 39a et 39b)
+Pic.37
+Page
+42
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 43 ===
+DOSSIER PROFESSIONNEL (DP)
+Pic.38
+Pic.39a
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+43
+
+=== PAGE 44 ===
+DOSSIER PROFESSIONNEL (DP)
+Pic.39b
+Page
+44
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 45 ===
+DOSSIER PROFESSIONNEL (DP)
+Extraits de code : Docker
+Dockerfile, default.conf, mongo-init, docker-compose et Makefile
+Pic.40
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+45
+
+=== PAGE 46 ===
+DOSSIER PROFESSIONNEL (DP)
+Pic.41
+Page
+46
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 47 ===
+DOSSIER PROFESSIONNEL (DP)
+Pic.42
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+47
+
+=== PAGE 48 ===
+DOSSIER PROFESSIONNEL (DP)
+Pic.43
+Page
+48
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 49 ===
+DOSSIER PROFESSIONNEL (DP)
+Configuration de l’environnement de travail
+Pic.44
+Pic.45
+Pic.46
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+49
+
+=== PAGE 50 ===
+Pic.48
+Page
+50
+DOSSIER PROFESSIONNEL (DP)
+Application QuizApp
+Pic.47
+Structure du projet
+Connexion DB
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 51 ===
+DOSSIER PROFESSIONNEL (DP)
+Création des tables questions et answers
+Pic.49
+Requête effectuée :
+Pic.50
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+51
+
+=== PAGE 52 ===
+DOSSIER PROFESSIONNEL (DP)
+Requête pour supprimer si la table existe :
+Pic.51
+Exemple de requête avec jointure & requête de suppression :
+Pic.52
+Page
+52
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 53 ===
+DOSSIER PROFESSIONNEL (DP)
+Requêtes INSERT INTO dans la console :
+Pic.53
+UPDATE ANSWERS :
+Pic.54
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+53
+
+=== PAGE 54 ===
+DOSSIER PROFESSIONNEL (DP)
+Sript SQL final :
+Pic.55
+Page
+54
+DOSSIER PROFESSIONNEL-Version du 11/09/2017
+
+=== PAGE 55 ===
+DOSSIER PROFESSIONNEL (DP)
+QuizApp !
+Pic.56
+DOSSIER PROFESSIONNEL-Version Traitement de texte – Version du 11/09/2017 Page
+55
+
