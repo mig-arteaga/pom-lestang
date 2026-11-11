@@ -1,8 +1,0 @@
-Il s'agit d'un dossier que je dois rendre pour mon diplôme de Développeur Web.
-Tu trouveras le modèle à respecter dans le fichier Modème dossier professionnel.docx.
-Tu trouveras un exemple de dossier rempli dans le fichier dosier-final.pdf.
-
-J'ai besoin que tu m'aides à rédiger ce document, de façon très similaire à l'exemple dans dossier-final.pdf,
-mais en utilisant le projet pom lestang, et le projet memory game.
-
-Tu notteras que aucun des deux contient du back, pour le back il faut rester très simple, pour celui de Pom Lestang
